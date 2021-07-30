@@ -1,0 +1,19 @@
+nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+}
+.post-profil-photo{
+    width: 46px;
+    height: 46px;
+    position: relative;
+    img{
+        transform: scale(1);
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+}

@@ -1,0 +1,50 @@
+.post__image{
+    width: 100%;
+    object-fit: contain;
+}
+.post_name{
+    font-weight: 600;
+    margin-left: 6px;
+}
+.post__comment_btn{
+    align-items: center;
+    width: 100%;
+}
+
+.btn-post{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 0;
+    color: #007bff;
+    background-color: transparent;
+    font-weight: 600;
+}
+.input__post{
+    width: 85%;
+}
+
+.post-profil-photo{
+    width: 46px;
+    height: 46px;
+    position: relative;
+    img{
+        transform: scale(1.2);
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+}
+.modal-body{
+    padding: 0;
+    margin: 0;
+}
+
+svg.liked {
+    fill: red;
+}
+  
+svg.not-liked {
+    fill: black;
+}

@@ -1,0 +1,25 @@
+.content{
+    padding-top: 60px;
+}
+.btn-follow{
+    border: 0;
+    color: #007bff;
+    background-color: transparent;
+    font-weight: 600;
+}
+.sug{
+    font-weight: 400;
+    color: grey;
+}
+.suggestion_image{
+    width: 56px;
+    height: 56px;
+    position: relative;
+    margin-right: 20px;
+    img{
+        transform: scale(1);
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+}

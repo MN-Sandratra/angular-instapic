@@ -1,0 +1,62 @@
+<div class="comment-container">
+    <div class="card post-container">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="embed-responsive">
+                        <img [src]="image" alt="tanana" class="post__image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <header class="post__titre d-flex flex-row align-items-center" *ngFor="let item of postuser">
+                        <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center post-profil-photo">
+                            <img src="{{item.picture}}" alt="pdp">
+                        </div>
+                        <span class="post_name ms-2">{{item.username}}</span>
+                    </header>
+                    <div class="scroller">
+                        <ul *ngFor="let comment of Commentaires">
+                            <li *ngFor="let item of getUser(comment.userId)" class="row">
+                                <div class=" col-md-12 rounded-circle overflow-hidden d-flex justify-content-center align-items-center post-profil-photo">
+                                    <img src="{{item.picture}}" alt="pdp">
+                                </div>
+                            <div class=" col"><span class="comment__name">{{item.username}}</span>
+                            {{comment.commentaire}}</div>
+                        </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <button class="btn" (click)="sendEvent()">
+                                    <svg class="{{ liked ? 'liked' : 'not-liked' }}" height="24" viewBox="0 0 48 48" width="1.6rem">
+                                        <path clicp-rule="evenodd" attr.d="{{ liked ? likeIcon.black : likeIcon.white }}"
+                                          fill-rule="evenodd"></path>
+                                      </svg>
+                                </button>
+                            </li>
+                            <li class="list-inline-item">
+                                <button class="btn">
+                                    <svg aria-label="Commenter" class="_8-yf5 " fill="#262626" height="24" role="img" viewBox="0 0 48 48" width="1.6rem"><path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ps-3 pe-3 pb-2">
+                        <strong class="d-block">{{like}} j'aime</strong>
+                        <small class="text-muted">il y a {{createAt}}</small>
+                    </div>
+                    <div class="position-relative">
+                            <input type="text" placeholder="Ajouter un commentaire..." class="input__post border-0 p-3"
+                            (keyup)="onChangeInput()"
+                            (keydown)="handlePostComment()"
+                            [(ngModel)]="commentInput"
+                            >
+                            <button class="btn btn-primary btn-post" (click)="addComment()" [disabled]="publication">Publier</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
