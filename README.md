@@ -8,7 +8,7 @@ Bienvenue dans InstaPic, une application Angular qui reproduit le frontend d'Ins
 
 Vous pouvez tester InstaPic en ligne en accédant à la version déployée sur GitHub Pages. Voici le lien direct vers le déploiement :
 
-[InstaPic sur GitHub Pages]($(https://mn-sandratra.github.io/angular-instapic/home/)
+[InstaPic sur GitHub Pages](https://mn-sandratra.github.io/angular-instapic/home/)
 
 
 ## Fonctionnalités
