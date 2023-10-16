@@ -77,6 +77,7 @@ export class PostComponent implements OnInit {
     this.router.navigate(['/commentaire',this.id]);
   }
 
+  //like button handles
   changelikefromComment=(message:any)=>{
     if(this.like<parseInt(message))
       this.liked=true;
@@ -84,6 +85,7 @@ export class PostComponent implements OnInit {
       this.liked=false;
     this.like=parseInt(message);
   }
+
   onChangeInput(){
     if(this.commentInput.trim().length===0)
       this.publication=true;
@@ -104,16 +106,24 @@ export class PostComponent implements OnInit {
   getComment(){
     this.Commentaires=this.api.getCommentByPostid(this.id);
   }
+  
+  showUserProfile(id:any):void {
+    this.router.navigate(['/profile',id]);
+  }
+
 
   addComment():void{
-    let com =new Commentaire();
-    com.userId=1;
-    com.id=comment.length+1;
-    com.postId=this.id;
-    com.commentaire=this.commentInput;
-    this.api.addComment(com);
-    this.getComment();
-    this.getNbrCommentaire(this.id);
+    if(this.commentInput.trim().length>0){
+      let com =new Commentaire();
+      com.userId=1;
+      com.id=comment.length+1;
+      com.postId=this.id;
+      com.commentaire=this.commentInput;
+    
+        this.api.addComment(com);
+        this.getComment();
+        this.getNbrCommentaire(this.id);
+    }
     this.commentInput='';
   }
 

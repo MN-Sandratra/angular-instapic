@@ -61,14 +61,16 @@ export class CommentaireComponent implements OnInit {
     this.Commentaires=this.api.getCommentByPostid(this.id);
   }
   addComment():void{
-    let com =new Commentaire();
-    com.userId=1;
-    com.id=comment.length+1;
-    com.postId=this.id;
-    com.commentaire=this.commentInput;
-    this.api.addComment(com);
-    this.getComment();
-    this.commentInput='';
+    if(this.commentInput.trim().length>0){
+      let com =new Commentaire();
+      com.userId=1;
+      com.id=comment.length+1;
+      com.postId=this.id;
+      com.commentaire=this.commentInput;
+      this.api.addComment(com);
+      this.getComment();
+      this.commentInput='';
+    }
   }
   onChangeInput(){
     if(this.commentInput.trim().length===0)

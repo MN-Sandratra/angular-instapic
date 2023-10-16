@@ -4,7 +4,7 @@
             <div class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center post-profil-photo ms-3" >
                 <img src="{{item.picture}}" alt="pdp">
             </div>
-            <span class="post_name ms-2">{{item.username}}</span>
+            <span class="post_name ms-2" (click)="showUserProfile(item.id)">{{item.username}}</span>
         </div>
     </div>
     <div class="card-body p-0">

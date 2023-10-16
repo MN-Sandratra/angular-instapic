@@ -15,9 +15,9 @@ export class ProfileComponent implements OnInit {
     "id": 1,
         "username": "Sandratra",
         "realName": "MBELO NDRIAMANAMPY Sandratra",
-        "bio":"Etudiant en 5eme annee en informatique IMTICIA 5",
+        "bio":"Étudiant en Master II en informatique à la Faculté des Sciences de Montpellier.",
         "picture":"profile.jpg",
-        "follower":125,
+        "follower":200,
         "following":215,
   }];
 
