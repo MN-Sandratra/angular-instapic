@@ -1,27 +1,32 @@
 # Instapic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+# InstaPic - Clone du Frontend d'Instagram
 
-## Development server
+Bienvenue dans InstaPic, une application Angular qui reproduit le frontend d'Instagram. Cette application est conçue pour vous permettre de découvrir les fonctionnalités principales d'Instagram, telles que la visualisation de photos, la publication de commentaires, Liker,ou meme la visualisation du profil des utilisateur.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Essayez InstaPic en ligne !
 
-## Code scaffolding
+Vous pouvez tester InstaPic en ligne en accédant à la version déployée sur GitHub Pages. Voici le lien direct vers le déploiement :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[InstaPic sur GitHub Pages](https://mn-sandratra.github.io/angular-instapic/)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Fonctionnalités
 
-## Running unit tests
+- Affichage de photos
+- Commentaires et likes sur les publications
+- Profils utilisateur avec des informations personnelles
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+1. Clonez ce référentiel sur votre ordinateur 
+2. Accédez au répertoire du projet :
+  cd instapic-clone
+3. Installez les dépendances requises :
+  npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Utilisation
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Démarrez l'application en utilisant la commande :
+  ng serve
+2. Ouvrez votre navigateur web et accédez à `http://localhost:4200/` pour voir InstaPic en action.
